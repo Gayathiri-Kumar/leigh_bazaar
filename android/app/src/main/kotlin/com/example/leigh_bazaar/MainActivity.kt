@@ -1,4 +1,4 @@
-package com.example.leigh_bazaar
+package com.pingolearn.leigh_bazaar
 
 import io.flutter.embedding.android.FlutterActivity
 
