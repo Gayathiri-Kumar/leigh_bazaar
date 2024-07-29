@@ -1,27 +1,31 @@
 class Product {
-  final int id;
+  final String imageUrl;
   final String title;
-  final double price;
+  final String description;
+  final double actualPrice;
   final double discountPercentage;
-  double? discountedPrice;
 
   Product({
-    required this.id,
+    required this.imageUrl,
     required this.title,
-    required this.price,
+    required this.description,
+    required this.actualPrice,
     required this.discountPercentage,
   });
+  double get discountPrice {
+    double discountAmount = actualPrice * (discountPercentage / 100);
+    double discountedPrice = actualPrice - discountAmount;
+
+    return discountedPrice;
+  }
 
   factory Product.fromJson(Map<String, dynamic> json) {
     return Product(
-      id: json['id'],
-      title: json['title'],
-      price: json['price'].toDouble(),
-      discountPercentage: json['discountPercentage'].toDouble(),
+      imageUrl: json['thumbnail'] as String,
+      title: json['title'] as String,
+      description: json['description'] as String,
+      actualPrice: (json['price'] as num).toDouble(),
+      discountPercentage: (json['discountPercentage'] as num).toDouble(),
     );
-  }
-
-  void calculateDiscountedPrice() {
-    discountedPrice = price - (price * discountPercentage / 100);
   }
 }
