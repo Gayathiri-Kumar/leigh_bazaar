@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "612221198391",
+    "project_id": "leighbazaar",
+    "storage_bucket": "leighbazaar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612221198391:android:153c07553f890b628c9fb2",
+        "android_client_info": {
+          "package_name": "com.pingolearn.leigh_bazaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2CU1UBQOJbIz6KbnRYFfnpFh41Ai5M4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
